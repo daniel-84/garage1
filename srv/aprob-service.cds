@@ -27,4 +27,10 @@ service CatalogService {
         descripcion,
         nse as serie
     };
+
+    //salida custom sin persistencia
+    entity Reporte as projection on aprob.Salida;
+
+    //Salida con error
+    entity Errores as projection on aprob.Salida;
 }

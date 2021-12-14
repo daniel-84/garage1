@@ -1,0 +1,29 @@
+GET http://localhost:4004/Catalog/ProductosSelect
+
+###
+GET http://localhost:4004/Catalog/Productos
+
+### filter
+GET http://localhost:4004/Catalog/Productos?$filter=idProducto eq 'T800'
+
+####
+GET http://localhost:4004/Catalog/Reporte
+
+#### Error
+GET http://localhost:4004/Catalog/Errores
+
+###
+GET http://localhost:4004/Catalog/OrdenesCab?$expand=toDetalle
+
+#### After
+GET http://localhost:4004/Catalog/ProductosSinSerie
+
+##### insert crear producto
+POST http://localhost:4004/Catalog/Productos
+Content-Type: application/json
+
+{
+    "idProducto": "T5000",
+    "descripcion": "Prueba http",
+    "nse": "1111111999"
+}
